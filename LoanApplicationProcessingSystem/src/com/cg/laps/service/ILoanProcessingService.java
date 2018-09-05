@@ -5,12 +5,14 @@ import java.util.ArrayList;
 import com.cg.laps.bean.LoanProgramsOfferedBean;
 
 public interface ILoanProcessingService {
+
 	
-	String checkLogin(String username, String password);
-	static ArrayList<LoanProgramsOfferedBean> display() {
-		
-		return null;
-	}
+
+	String checkLogin(String userId, String password);
+
+	 ArrayList<LoanProgramsOfferedBean> display();
+
+	
 
 	
 

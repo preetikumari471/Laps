@@ -1,14 +1,11 @@
-package com.cg.laps.service;
+package com.cg.laps.dao;
 
 import java.util.ArrayList;
 
 import com.cg.laps.bean.LoanApplicationBean;
 
-public interface ILoanApprovalDepartmentService {
-
-	String checkLogin(String userId, String password);
+public interface ILoanApprovalDepartmentDao {
 
 	ArrayList<LoanApplicationBean> viewSpecificList(String program);
-
 
 }

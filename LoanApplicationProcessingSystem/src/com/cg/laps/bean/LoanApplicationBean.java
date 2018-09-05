@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class LoanApplicationBean {
 
 	private int applicationId;
-	private LocalDate applicationDate;
+	private String applicationDate;
 	private String loanProgram;
 	private double loanAmount;
 	private String propertyAddress;
@@ -14,7 +14,7 @@ public class LoanApplicationBean {
 	private String guaranteeCoverString;
 	private double marktValOfCover;
 	private String status;
-	private LocalDate interviewDate;
+	private String interviewDate;
 
 	public int getApplicationId() {
 		return applicationId;
@@ -24,11 +24,11 @@ public class LoanApplicationBean {
 		this.applicationId = applicationId;
 	}
 
-	public LocalDate getApplicationDate() {
+	public String getApplicationDate() {
 		return applicationDate;
 	}
 
-	public void setApplicationDate(LocalDate applicationDate) {
+	public void setApplicationDate(String applicationDate) {
 		this.applicationDate = applicationDate;
 	}
 
@@ -96,11 +96,11 @@ public class LoanApplicationBean {
 		this.status = status;
 	}
 
-	public LocalDate getInterviewDate() {
+	public String getInterviewDate() {
 		return interviewDate;
 	}
 
-	public void setInterviewDate(LocalDate interviewDate) {
+	public void setInterviewDate(String interviewDate) {
 		this.interviewDate = interviewDate;
 	}
 
@@ -112,7 +112,7 @@ public class LoanApplicationBean {
 			double loanAmount, String propertyAddress,
 			double annualFamilyIncome, String docsProof,
 			String guaranteeCoverString, double marktValOfCover, String status,
-			LocalDate interviewDate) {
+			String interviewDate) {
 		super();
 		this.applicationId = applicationId;
 		this.loanProgram = loanProgram;

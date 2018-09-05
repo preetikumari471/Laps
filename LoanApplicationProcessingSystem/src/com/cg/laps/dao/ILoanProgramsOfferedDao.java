@@ -4,6 +4,8 @@ import com.cg.laps.bean.LoanProgramsOfferedBean;
 
 public interface ILoanProgramsOfferedDao {
 
-	boolean addLoanPrograms(LoanProgramsOfferedBean loanProgramsOffered);
+	int addLoanPrograms(LoanProgramsOfferedBean loanProgramsOffered);
+
+	int deleteLoanPrograms(String dltprogram);
 
 }

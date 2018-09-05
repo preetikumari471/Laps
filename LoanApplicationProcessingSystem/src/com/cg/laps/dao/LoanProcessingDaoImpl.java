@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.cg.laps.bean.LoanApplicationBean;
 import com.cg.laps.bean.LoanProgramsOfferedBean;
 import com.cg.laps.bean.UserBean;
 import com.cg.laps.util.DBUtil;
@@ -17,11 +18,11 @@ public class LoanProcessingDaoImpl implements ILoanProcessingDao {
 	static Connection conn;
 	static PreparedStatement preparedstatement=null;
 	static ResultSet rs=null;
-	static UserBean user=null; 
+
 
 	@Override
 	public String checkLogin(String userId, String password) {
-			user=new UserBean();
+		
 		
 		try {
 			conn = DBUtil.establishConnection();
@@ -84,4 +85,6 @@ public class LoanProcessingDaoImpl implements ILoanProcessingDao {
 		return null;
 	
 	}
+
+	
 }

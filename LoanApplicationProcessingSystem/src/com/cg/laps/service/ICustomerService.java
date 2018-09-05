@@ -11,6 +11,12 @@ public interface ICustomerService {
 
 	boolean addPersonalDetails(CustomerBean customer);
 
+	int addApplicationDetails(LoanApplicationBean loanApplication);
+
+	String viewApplicationStatus(int appid);
+
+	
+
 	
 
 }

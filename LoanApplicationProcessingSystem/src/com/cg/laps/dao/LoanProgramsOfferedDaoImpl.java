@@ -15,14 +15,14 @@ public class LoanProgramsOfferedDaoImpl implements ILoanProgramsOfferedDao{
 	static Connection conn;
 	static PreparedStatement preparedstatement=null;
 	static ResultSet rs=null;
-	boolean result=false;
+	int operation=0;
 	
 	
 	@Override
-	public boolean addLoanPrograms(LoanProgramsOfferedBean loanProgramsOffered) {
+	public int addLoanPrograms(LoanProgramsOfferedBean loanProgramsOffered) {
 		
 		
-		int queryResult=0;
+		
 		
 		conn = DBUtil.establishConnection();
 		try {
@@ -40,7 +40,7 @@ public class LoanProgramsOfferedDaoImpl implements ILoanProgramsOfferedDao{
 		
 		//ResultSet rs=preparedstatement.executeUpdate();
 		
-		queryResult=preparedstatement.executeUpdate();
+		operation=preparedstatement.executeUpdate();
 	
 		/*	
 			if(queryResult==0)
@@ -85,7 +85,30 @@ public class LoanProgramsOfferedDaoImpl implements ILoanProgramsOfferedDao{
 	
 		
 		
-		return true;
+		return operation ;
 	}
+
+
+	@Override
+	public int deleteLoanPrograms(String dltprogram) {
+		try {
+		String status=null;;
+		conn = DBUtil.establishConnection();
+	
+			preparedstatement = conn.prepareStatement(IQueryMapper.DELETE_QUERY_LOAN_PROGRAMS_OFFERED);
+			preparedstatement.setString(1, dltprogram);
+		
+			operation=preparedstatement.executeUpdate();
+
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return operation;
+	}
+
+
+
 	
 }
