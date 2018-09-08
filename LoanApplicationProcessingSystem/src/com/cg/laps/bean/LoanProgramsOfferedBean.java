@@ -78,9 +78,10 @@ public class LoanProgramsOfferedBean {
 
 	}
 
-	public LoanProgramsOfferedBean(String loanProgramString, String description,
-			String loanType, int durationInYears, int minLoanAmnt,
-			int maxLoanAmnt, double rateOfIntrest, String proofReq) {
+	public LoanProgramsOfferedBean(String loanProgramString,
+			String description, String loanType, int durationInYears,
+			int minLoanAmnt, int maxLoanAmnt, double rateOfIntrest,
+			String proofReq) {
 		super();
 		this.loanProgramName = loanProgramString;
 		this.description = description;

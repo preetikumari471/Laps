@@ -1,6 +1,5 @@
 package com.cg.laps.bean;
 
-
 public class UserBean {
 
 	private String userId;

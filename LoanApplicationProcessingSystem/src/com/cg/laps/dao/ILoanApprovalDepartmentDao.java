@@ -8,4 +8,6 @@ public interface ILoanApprovalDepartmentDao {
 
 	ArrayList<LoanApplicationBean> viewSpecificList(String program);
 
+	int changeStatus(int opt, int applicationId);
+
 }

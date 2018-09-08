@@ -10,5 +10,6 @@ public interface ILoanApprovalDepartmentService {
 
 	ArrayList<LoanApplicationBean> viewSpecificList(String program);
 
+	int changeStatus(int opt, int applicationId);
 
 }

@@ -5,8 +5,6 @@ import com.cg.laps.bean.LoanApplicationBean;
 
 public interface ICustomerService {
 
-	
-
 	String viewApplicationStatus();
 
 	boolean addPersonalDetails(CustomerBean customer);
@@ -14,9 +12,5 @@ public interface ICustomerService {
 	int addApplicationDetails(LoanApplicationBean loanApplication);
 
 	String viewApplicationStatus(int appid);
-
-	
-
-	
 
 }

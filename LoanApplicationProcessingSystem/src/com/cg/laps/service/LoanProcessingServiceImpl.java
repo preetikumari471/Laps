@@ -2,31 +2,33 @@ package com.cg.laps.service;
 
 import java.util.ArrayList;
 
+import com.cg.laps.bean.LoanApplicationBean;
 import com.cg.laps.bean.LoanProgramsOfferedBean;
+import com.cg.laps.dao.AdminDaoImpl;
+import com.cg.laps.dao.LoanApprovalDepartmentDaoImpl;
 import com.cg.laps.dao.LoanProcessingDaoImpl;
 
-public class LoanProcessingServiceImpl implements ILoanProcessingService{
-	
-	 static LoanProcessingDaoImpl loanProcessingDao=null;
-	 
-	 @Override
-	 public String checkLogin(String userId, String password) {
-				loanProcessingDao = new LoanProcessingDaoImpl();
-				return loanProcessingDao.checkLogin(userId, password);
-		}
-	 
+public class LoanProcessingServiceImpl implements ILoanProcessingService {
 
-	 @Override
-	 public  ArrayList<LoanProgramsOfferedBean> display() {
-		 		loanProcessingDao = new LoanProcessingDaoImpl();
-		 		return loanProcessingDao.display();
-				
-		
+	static LoanProcessingDaoImpl loanProcessingDao = null;
+
+	@Override
+	public String checkLogin(String userId, String password) {
+		loanProcessingDao = new LoanProcessingDaoImpl();
+		return loanProcessingDao.checkLogin(userId, password);
 	}
 
-	
-		
-		
+	@Override
+	public ArrayList<LoanProgramsOfferedBean> display() {
+		loanProcessingDao = new LoanProcessingDaoImpl();
+		return loanProcessingDao.display();
 
+	}
+
+	@Override
+	public ArrayList<LoanApplicationBean> viewApplicationList() {
+		loanProcessingDao = new LoanProcessingDaoImpl();
+		return loanProcessingDao.viewApplicationList();
+	}
 
 }
